@@ -3,8 +3,23 @@ Input: an integer
 Returns: an integer
 '''
 def eating_cookies(n):
-    # Your code here
+    # no or negative cookies
+    if n <= 0:
+        return 1
+    # 1 cookie
+    if n == 1:
+        return 1
+    # 2 cookie
+    elif n == 2:
+        return 2
+    # 3 cookie
+    elif n == 3:
+        return 4
+    else:
+        return eating_cookies(n - 1) + eating_cookies(n - 2) + eating_cookies(n - 3)
+    
 
+    
     pass
 
 if __name__ == "__main__":
