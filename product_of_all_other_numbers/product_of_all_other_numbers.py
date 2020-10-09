@@ -7,9 +7,12 @@ def product_of_all_other_numbers(arr):
     for i in range(len(arr)):
         temp = arr[i]
         arr[i] = 1
-        
-
+        product = 1
+        for each in arr:
+            product *= each     
+        new_arr.append(product)
         arr[i] = temp
+    return new_arr
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
